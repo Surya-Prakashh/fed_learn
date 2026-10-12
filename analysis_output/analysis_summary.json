@@ -1,0 +1,471 @@
+{
+  "dataset": "WISDM v2",
+  "totalSubjects": 51,
+  "subjectRange": [
+    1600,
+    1650
+  ],
+  "totalReadings": 15630426,
+  "sampleRateHz": 20,
+  "windowSizeSec": 10,
+  "overlapPct": 50,
+  "totalFeatureWindows": 46691,
+  "numFeatures": 71,
+  "activities": {
+    "A": "Walking",
+    "B": "Jogging",
+    "C": "Stairs",
+    "D": "Sitting",
+    "E": "Standing",
+    "F": "Typing",
+    "G": "Brushing Teeth",
+    "H": "Eating Soup",
+    "I": "Eating Chips",
+    "J": "Eating Pasta",
+    "K": "Drinking",
+    "L": "Eating Sandwich",
+    "M": "Kicking",
+    "O": "Catching",
+    "P": "Dribbling",
+    "Q": "Writing",
+    "R": "Clapping",
+    "S": "Folding"
+  },
+  "activityGroups": {
+    "A": "Locomotion",
+    "B": "Locomotion",
+    "C": "Locomotion",
+    "D": "Sedentary",
+    "E": "Sedentary",
+    "F": "Hand-Oriented",
+    "G": "Hand-Oriented",
+    "Q": "Hand-Oriented",
+    "R": "Hand-Oriented",
+    "S": "Hand-Oriented",
+    "H": "Eating",
+    "I": "Eating",
+    "J": "Eating",
+    "K": "Eating",
+    "L": "Eating",
+    "M": "Sports",
+    "O": "Sports",
+    "P": "Sports"
+  },
+  "groupColors": {
+    "Locomotion": "#FF6B6B",
+    "Sedentary": "#4ECDC4",
+    "Hand-Oriented": "#45B7D1",
+    "Eating": "#96CEB4",
+    "Sports": "#FFEAA7"
+  },
+  "perClientStats": {
+    "1600": {
+      "totalSamples": 259455,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1601": {
+      "totalSamples": 292319,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1602": {
+      "totalSamples": 279111,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1603": {
+      "totalSamples": 292756,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1604": {
+      "totalSamples": 258331,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1605": {
+      "totalSamples": 294844,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1606": {
+      "totalSamples": 258302,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1607": {
+      "totalSamples": 285031,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1608": {
+      "totalSamples": 297126,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1609": {
+      "totalSamples": 261573,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1610": {
+      "totalSamples": 274908,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1611": {
+      "totalSamples": 258304,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1612": {
+      "totalSamples": 259094,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1613": {
+      "totalSamples": 292608,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1614": {
+      "totalSamples": 376891,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1615": {
+      "totalSamples": 258337,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1616": {
+      "totalSamples": 277107,
+      "numActivities": 17,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1617": {
+      "totalSamples": 262539,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1618": {
+      "totalSamples": 244015,
+      "numActivities": 17,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1619": {
+      "totalSamples": 292359,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1620": {
+      "totalSamples": 309690,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1621": {
+      "totalSamples": 305588,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1622": {
+      "totalSamples": 258304,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1623": {
+      "totalSamples": 285138,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1624": {
+      "totalSamples": 271054,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1625": {
+      "totalSamples": 312530,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1626": {
+      "totalSamples": 279193,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1627": {
+      "totalSamples": 349197,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1628": {
+      "totalSamples": 313377,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1629": {
+      "totalSamples": 527392,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1630": {
+      "totalSamples": 258301,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1631": {
+      "totalSamples": 258316,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1632": {
+      "totalSamples": 258308,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1633": {
+      "totalSamples": 279943,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1634": {
+      "totalSamples": 258333,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1635": {
+      "totalSamples": 323138,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1636": {
+      "totalSamples": 258301,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1637": {
+      "totalSamples": 352825,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1638": {
+      "totalSamples": 361849,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1639": {
+      "totalSamples": 357362,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1640": {
+      "totalSamples": 361857,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1641": {
+      "totalSamples": 366299,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1642": {
+      "totalSamples": 334630,
+      "numActivities": 16,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1643": {
+      "totalSamples": 357325,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1644": {
+      "totalSamples": 377333,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1645": {
+      "totalSamples": 376488,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1646": {
+      "totalSamples": 370719,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1647": {
+      "totalSamples": 294105,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1648": {
+      "totalSamples": 370773,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1649": {
+      "totalSamples": 293473,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    },
+    "1650": {
+      "totalSamples": 374275,
+      "numActivities": 18,
+      "devices": [
+        "watch",
+        "phone"
+      ]
+    }
+  }
+}
