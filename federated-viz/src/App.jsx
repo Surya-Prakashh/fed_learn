@@ -21,6 +21,8 @@ import { AccuracyChart, LossChart, CommunicationChart } from './MetricsCharts';
 import { FedAvgSimulation } from './simulation';
 import AnalysisDashboard from './AnalysisDashboard';
 import PredictTab from './PredictTab';
+import MultiComputerCoordinator from './MultiComputerCoordinator';
+import EdgeClientPortal from './EdgeClientPortal';
 
 // ─── Group colors for legend ────────────────────────────────
 const GROUP_COLORS = {
@@ -129,7 +131,12 @@ function NodeTooltip({ node, position }) {
 // ─── Main App ────────────────────────────────────────────────
 export default function App() {
   // Navigation Tabs: '3d' | 'predict' | 'analysis'
-  const [activeTab, setActiveTab] = useState('3d');
+  const getInitialTab = () => {
+    if (window.location.hash === '#client' || window.location.pathname === '/client') return 'client';
+    if (window.location.hash === '#coordinator') return 'coordinator';
+    return '3d';
+  };
+  const [activeTab, setActiveTab] = useState(getInitialTab);
 
   // Source Mode: 'websocket' | 'simulation'
   const [sourceMode, setSourceMode] = useState('websocket');
@@ -200,7 +207,8 @@ export default function App() {
   useEffect(() => {
     function connectWS() {
       try {
-        const ws = new WebSocket('ws://localhost:8000/metrics');
+        const host = window.location.hostname || 'localhost';
+        const ws = new WebSocket(`ws://${host}:8000/metrics`);
         ws.onopen = () => {
           setWsConnected(true);
           console.log('WebSocket connected to Python training server');
@@ -408,7 +416,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* ─── Tabs Switcher (3 Tabs) ─── */}
+        {/* ─── Tabs Switcher (5 Tabs) ─── */}
         <div className="header-center">
           <button
             className={`tab-btn ${activeTab === '3d' ? 'active' : ''}`}
@@ -417,16 +425,28 @@ export default function App() {
             🌐 3D Live Network
           </button>
           <button
+            className={`tab-btn ${activeTab === 'coordinator' ? 'active' : ''}`}
+            onClick={() => setActiveTab('coordinator')}
+          >
+            🖥️ Multi-Computer (Global View)
+          </button>
+          <button
+            className={`tab-btn ${activeTab === 'client' ? 'active' : ''}`}
+            onClick={() => setActiveTab('client')}
+          >
+            💻 Edge Client (Other User)
+          </button>
+          <button
             className={`tab-btn ${activeTab === 'predict' ? 'active' : ''}`}
             onClick={() => setActiveTab('predict')}
           >
-            🔮 Live Inference / Predict
+            🔮 Live Inference
           </button>
           <button
             className={`tab-btn ${activeTab === 'analysis' ? 'active' : ''}`}
             onClick={() => setActiveTab('analysis')}
           >
-            📊 Benchmark & Analysis
+            📊 Benchmark
           </button>
         </div>
 
@@ -717,10 +737,16 @@ export default function App() {
         </>
       )}
 
-      {/* ─── TAB 2: Live Inference / Prediction ─── */}
+      {/* ─── TAB 2: Multi-Computer Coordinator (Global Host View) ─── */}
+      {activeTab === 'coordinator' && <MultiComputerCoordinator />}
+
+      {/* ─── TAB 3: Edge Client Portal (Other User / Remote Computer) ─── */}
+      {activeTab === 'client' && <EdgeClientPortal />}
+
+      {/* ─── TAB 4: Live Inference / Prediction ─── */}
       {activeTab === 'predict' && <PredictTab />}
 
-      {/* ─── TAB 3: Complete Benchmark & Dataset Analysis ─── */}
+      {/* ─── TAB 5: Complete Benchmark & Dataset Analysis ─── */}
       {activeTab === 'analysis' && <AnalysisDashboard />}
     </div>
   );
